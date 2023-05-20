@@ -3,11 +3,9 @@ package com.paymentchain.billing;
 import java.util.Base64;
 import java.util.Optional;
 
-<<<<<<< HEAD
-
 @RunWith(SpringRunner.class)
 @SpringBootTest
-=======
+
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mockito;
@@ -50,10 +48,15 @@ import com.paymentchain.billing.respository.InvoiceRepository;
 @ExtendWith(SpringExtension.class)//junit5 suport extension interface hrough which classes can integrate with the JUnit test.
 @AutoConfigureMockMvc/*allow test only http incoming request layer without start the serve, 
         but starting the full spring application context*/
->>>>>>> eef550f29a8a925a35cfb15dc52ff29629e5cafc
+
 public class BasicApplicationTests {
+ 
+ @Test
+ public void contextLoads() {
+ 	    String meessage= "Esta es una nueva prueba devops_1";
+ 	    Assert.assertNotNull(meessage);
+ }
     
-  
     @Autowired
     private MockMvc mockMvc;
     @MockBean //mock the repository layer in order to have a unit test for weblayer 
